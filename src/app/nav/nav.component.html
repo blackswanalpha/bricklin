@@ -1,0 +1,321 @@
+<!-- <mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <span>Second Line</span>
+
+    <span class="example-spacer"></span>
+    <a class="navbar-brand" [routerLink]="['/lecturer']" href="/lecturer">lecturer</a>
+    <a class="navbar-brand" [routerLink]="['/product']" href="/product">product</a>
+    <a class="navbar-brand" routerLink="['/department']" href="/department">department</a>
+    <!-- <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+
+                <a class="navbar-brand" [routerLink]="['/lecturer']" href="/product">product</a>
+                <a class="navbar-brand" [routerLink]="['/product']" href="/product">product</a>
+                <a class="navbar-brand" routerLink="['/department']" href="/department">department</a>
+            </li>
+        </ul>
+
+    </div> 
+
+</mat-toolbar> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button mat-icon-button *ngIf="sidenav.mode === 'side'" (click)="sidenav.toggle()">
+        <mat-icon style="color:white;" *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon style="color:white;" *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <a class="navbar-brand" style="color:white;">Timetable</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="navbar-brand" [routerLink]="['/lecturer']" href="/lecturer">lecturer</a>
+                <a class="navbar-brand" [routerLink]="['/product']" href="/product">product</a>
+                <a class="navbar-brand" [routerLink]="['/department']" href="/department">department</a>
+                <a class="navbar-brand" [routerLink]="['/institution']" href="/institution">Institution</a>
+
+
+            </li>
+        </ul>
+
+    </div>
+</nav> -->
+<!-- <div *ngIf="loadingHandler.isLoading$ | async" class="loader-container position-absolute">
+    <mat-spinner strokeWidth="10" [diameter]="65" color="black" title="Tooltip text here" style="top: 10%; left: 50%;color:black;stroke: #0000!important;"></mat-spinner>
+
+</div> -->
+
+<!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+
+        <h4 class="name">John Smith</h4>
+        <p class="designation">Software Engineer</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content  " [@triggerName]="prepareRoute(outlet)">
+
+
+            <router-outlet #outlet="outlet">
+
+            </router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+<app-splash [duration]="2" [animationDuration]="1"></app-splash>
+
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer class="sidenav  mat-elevation-z2 bg-white text-dark" mode="over" #drawer closed>
+        <img class="avatar mat-elevation-z8 img-center " src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+
+        <h4 class="name text-center">John Smith</h4>
+        <p class="designation text-center">Software Engineer</p>
+
+        <mat-divider></mat-divider>
+
+        <!-- <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button> -->
+        <!-- <ul class="list-unstyled show-sm components">
+            <li>
+                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span></a>
+            </li>
+            <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+        </button>
+            <button HorizontalContentAlignment="Left" mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+        </ul> -->
+
+
+
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="navbar-brand" [routerLink]="['/lecturer']" href="/lecturer">Home</a>
+
+                <a class="navbar-brand" [routerLink]="['/profile']" href="/profile">Profile</a>
+
+                <a class="navbar-brand" [routerLink]="['/department']" href="/department">settings</a>
+
+                <!-- <a class="navbar-brand" [routerLink]="['/institution']" href="/institution">Institution</a> -->
+
+
+            </li>
+        </ul>
+        <mat-divider></mat-divider>
+        <ul class="list-unstyled mr-auto components">
+
+            <li class="">
+
+                <a [routerLink]="['/generator']" href="/generator">generator</a>
+
+            </li>
+            <li>
+                <a [routerLink]="['/product']" href="/product">product</a>
+                <a [routerLink]="['/department']" href="/department">department</a>
+
+
+
+            </li>
+            <li>
+                <a [routerLink]="['/institution']" href="/institution">Institution</a>
+
+            </li>
+            <li>
+                <a [routerLink]="['/planner']" href="/planner">planner</a>
+
+                <a [routerLink]="['/mode']" href="/mode">mode</a>
+
+                <!-- <a mat-button class="nav-link">LogOut</a> -->
+
+
+
+            </li>
+        </ul>
+        <mat-divider></mat-divider>
+
+        <ul class="list-unstyled CTAs">
+            <!-- <li><a href="#" class="download">Download source</a></li> -->
+            <!-- <li><a href="/logout" *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/logout']" class="article">logout</a> -->
+            <!-- </li> -->
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="content  ">
+        <div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white ">
+                <!-- <button mat-icon-button *ngIf="sidenav.mode === 'side'" (click)="sidenav.toggle()">
+        <mat-icon style="color:white;" *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon style="color:white;" *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+        
+    </button> -->
+
+                <!-- *ngIf="loginService.isUserLoggedIn()" -->
+
+                <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon style="color:black;" *ngIf="!drawer.opened">
+            menuv
+          </mat-icon>
+          <mat-icon style="color:black;" *ngIf="drawer.opened">
+
+            menuv
+          </mat-icon>
+        </button>
+
+
+
+                <a class="navbar-brand" style="color:black;"><b>BRICKLIN</b></a>
+
+                <span class="example-spacer"></span>
+
+                <!-- <div class="collapse navbar-collapse " id="navbarColor02">
+                    <ul class=" mr-auto nav-tabs " ngbNav #nav="ngbNav">
+                        <li class="nav-item active " ngbNavItem>
+                            <a class="navbar-brand" ngbNavLink [routerLink]="['/lecturer']" href="/lecturer">lecturer</a>
+                            <a class="navbar-brand" ngbNavLink [routerLink]="['/product']" href="/product">product</a>
+                            <a class="navbar-brand" ngbNavLink [routerLink]="['/department']" href="/department">department</a>
+                            <a class="navbar-brand" ngbNavLink [routerLink]="['/institution']" href="/institution">Institution</a>
+
+
+                        </li>
+                    </ul>
+
+                </div> -->
+                <!-- *ngIf="loginService.isUserLoggedIn()" -->
+
+
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills  collapse navbar-collapse justify-content-end">
+                    <li [ngbNavItem]="1">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-current="page" ngbNavLink [routerLink]="['/generator']" href="/lecturer">generator</a>
+
+
+                    </li>
+                    <li [ngbNavItem]="2">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ngbNavLink [routerLink]="['/product']" href="/product">product</a>
+
+
+                    </li>
+                    <li [ngbNavItem]="3">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ngbNavLink [routerLink]="['/department']" href="/department">department</a>
+
+
+                    </li>
+                    <li [ngbNavItem]="4">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ngbNavLink [routerLink]="['/institution']" href="/institution">Institution</a>
+
+
+                    </li>
+                    <li [ngbNavItem]="5">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ngbNavLink [routerLink]="['/planner']" href="/planner">planner</a>
+
+
+                    </li>
+                    <li [ngbNavItem]="6">
+
+                        <a class="navbar-brand p-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ngbNavLink [routerLink]="['/mode']" href="/mode">mode</a>
+
+
+                    </li>
+
+
+
+                </ul>
+                <!-- <div [ngbNavOutlet]="nav"></div> -->
+            </nav>
+            <!-- <a mat-button *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/login']">Login</a> -->
+            <div [@triggerName]="prepareRoute(outlet)">
+                <router-outlet #outlet="outlet">
+
+                </router-outlet>
+
+
+
+            </div>
+            <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+                <!-- Copyright -->
+                <div class="text-white mb-3 mb-md-0">
+                    Copyright © 2020. All rights reserved.
+                </div>
+                <!-- Copyright -->
+
+                <!-- Right -->
+                <div>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#!" class="text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </div>
+        </div>
+    </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+<simple-notifications></simple-notifications>

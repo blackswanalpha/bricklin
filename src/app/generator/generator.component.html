@@ -1,0 +1,73 @@
+<main class="myform">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div style="background-color: #1fa667;color: #ffffff" class="card-header">Generate QR Codes<p>{{ ipAddress }}</p></div>
+                    <div class="card-body">
+                        <form name="myform" [formGroup]="generatorGroup" #f="ngForm" (ngSubmit)="onSubmit(generatorGroup) " method="POST">
+
+                            <div class="form-group row">
+                                <label for="brand" class="col-md-4 col-form-label text-md-right">Brand Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" formControlName="productName" id="brand" class="form-control" name="brand">
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="form-group row">
+                                <label for="model" class="col-md-4 col-form-label text-md-right">Model</label>
+                                <div class="col-md-6">
+                                    <input type="text" formControlName="productModel" id="model" class="form-control" name="model">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
+                                <div class="col-md-6">
+                                    <input type="text" formControlName="productDesc" id="description" class="form-control" name="description" style="height:100px">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="manufacturerName" class="col-md-4 col-form-label text-md-right">Manufacturer Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" formControlName="productManufacturerName" id="manufacturerName" class="form-control" name="manufacturerName">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="manufacturerLocation" class="col-md-4 col-form-label text-md-right">Manufacturer Location</label>
+                                <div class="col-md-6">
+                                    <input type="text" formControlName="productLocation" id="manufacturerLocation" class="form-control" name="manufacturerLocation">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                        Generate
+                                        </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class=" offset-md-4 col-md-6">
+            <!-- <qrcode [qrdata]="'myAngularxQrCode'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode> -->
+            <ngx-qrcode [elementType]="elementType" [width]="256" [errorCorrectionLevel]="correctionLevel" [value]="value" cssClass="coolQRCode"></ngx-qrcode>
+            <button class="btn btn-primary btn-lg" (click)="downloadQRCode()">Download QRCode</button>
+        </div>
+
+    </div>
+</div>
+<br> <br>
